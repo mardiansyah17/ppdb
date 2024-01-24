@@ -1,6 +1,6 @@
 export default function Timeline() {
     return (
-        <div className={`flex`}>
+        <div className={`flex  w-fit`}>
             <div className={`flex items-center`}>
                 <div
                     className={`border-2 rounded-full flex justify-center items-center text-primary-2 border-primary-2 size-10 text-2xl font-semibold`}>
@@ -13,7 +13,7 @@ export default function Timeline() {
                     className={`border-2 rounded-full flex justify-center items-center text-primary-2 border-primary-2 size-10 text-2xl font-semibold`}>
                     <p>2</p>
                 </div>
-                <hr className="h-[0.3rem] my-8 bg-gray-200 border-0 w-20"/>
+                <hr className="h-[0.3rem] my-8 bg-[#D9D9D9] border-0 w-20"/>
             </div>
             <div className={`flex items-center`}>
                 <div
@@ -22,6 +22,6 @@ export default function Timeline() {
                 </div>
             </div>
         </div>
-        
+
     )
 }

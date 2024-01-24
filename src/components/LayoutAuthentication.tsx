@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LayoutAuthentication({children}: { children: ReactNode }) {
     return (
-        <div className={`bg-[#F1F3F5] min-h-screen flex flex-col justify-center items-center lg:flex-row`}>
+        <div className={` min-h-screen flex flex-col justify-center items-center lg:flex-row`}>
             <div className={`p-5 lg:basis-[55%] lg:px-20`}>
                 <h1 className={`text-primary-2 text-xl mb-4`}>Selamat Datang di Portal SMP Islam Terpadu Harapan Mulia
                     Palembang!🌙
