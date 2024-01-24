@@ -1,3 +1,11 @@
 'use client';
 
-export {ThemeProvider} from '@material-tailwind/react';
+export {
+    ThemeProvider, Timeline,
+    TimelineItem,
+    TimelineConnector,
+    TimelineHeader,
+    TimelineIcon,
+    TimelineBody,
+    Typography,
+} from '@material-tailwind/react';

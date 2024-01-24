@@ -7,11 +7,17 @@ import {useRouter} from "next/navigation";
 
 export default function Page() {
     const router = useRouter();
+
     return <LayoutAuthentication>
         <form action="" className={`mt-4`}>
             <div className={`mb-4`}>
 
                 <Input label={"NISN/NIK"}/>
+            </div>
+
+            <div className={`mb-4`}>
+
+                <Input label={"Nama lengkap"}/>
             </div>
             <div className={`mb-4`}>
 
@@ -24,9 +30,9 @@ export default function Page() {
                 </div>
                 <Link href={'/login/forgot-password'}>Lupa password</Link>
             </div>
-            <Button fullWidth type={'button'} onClick={() => router.push('/pembayaran')}>Login</Button>
+            <Button fullWidth type={'button'} onClick={() => router.push('/pembayaran')}>Daftar</Button>
         </form>
 
-        <p className={`text-sm mt-12 text-center`}>Tidak punya akun? <Link href="/register">Daftar</Link></p>
+        <p className={`text-sm mt-12 text-center`}>Tidak punya akun? <Link href="/login">Login</Link></p>
     </LayoutAuthentication>
 }
