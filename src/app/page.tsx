@@ -1,6 +1,8 @@
 import Hero from "@/components/landingpage/Hero";
 import Image from "next/image";
 import Exclusive from "@/components/landingpage/Exclusive";
+import {Accordion, AccordionBody, AccordionHeader} from "@/libs/materialTailwind";
+import {FaArrowDown, FaArrowUp} from "react-icons/fa6";
 
 export default function Home() {
     return (
@@ -38,6 +40,47 @@ export default function Home() {
             </div>
 
             <Exclusive/>
+            <div className={`p-3 sm:px-10`}>
+                <h2 className={`text-2xl font-semibold mt-10 mb-5`}>Pertanyaan yang Sering Diajukan</h2>
+                <div>
+                    <Accordion open={true} icon={<FaArrowDown/>}>
+                        <AccordionHeader>cara mendaftar melalui PPDB?</AccordionHeader>
+                        <AccordionBody>
+                            Proses pendaftaran melalui PPDB biasanya dilakukan secara online. Calon siswa dan orang tua
+                            dapat mengakses situs web resmi sekolah atau portal PPDB yang disediakan oleh pemerintah
+                            daerah setempat untuk mengisi formulir pendaftaran.
+                        </AccordionBody>
+                    </Accordion>
+                    <Accordion open={false} icon={<FaArrowUp/>}>
+                        <AccordionHeader>cara mendaftar melalui PPDB?</AccordionHeader>
+                        <AccordionBody>
+                            Proses pendaftaran melalui PPDB biasanya dilakukan secara online. Calon siswa dan orang tua
+                            dapat mengakses situs web resmi sekolah atau portal PPDB yang disediakan oleh pemerintah
+                            daerah setempat untuk mengisi formulir pendaftaran.
+                        </AccordionBody>
+                    </Accordion>
+
+                    <Accordion open={false} icon={<FaArrowUp/>}>
+                        <AccordionHeader>cara mendaftar melalui PPDB?</AccordionHeader>
+                        <AccordionBody>
+                            Proses pendaftaran melalui PPDB biasanya dilakukan secara online. Calon siswa dan orang tua
+                            dapat mengakses situs web resmi sekolah atau portal PPDB yang disediakan oleh pemerintah
+                            daerah setempat untuk mengisi formulir pendaftaran.
+                        </AccordionBody>
+                    </Accordion>
+
+                    <Accordion open={false} icon={<FaArrowUp/>}>
+                        <AccordionHeader>cara mendaftar melalui PPDB?</AccordionHeader>
+                        <AccordionBody>
+                            Proses pendaftaran melalui PPDB biasanya dilakukan secara online. Calon siswa dan orang tua
+                            dapat mengakses situs web resmi sekolah atau portal PPDB yang disediakan oleh pemerintah
+                            daerah setempat untuk mengisi formulir pendaftaran.
+                        </AccordionBody>
+                    </Accordion>
+                </div>
+            </div>
+
+
         </div>
     );
 }

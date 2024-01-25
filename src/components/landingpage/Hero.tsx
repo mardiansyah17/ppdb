@@ -7,26 +7,28 @@ export default function Hero() {
         <p>Gabung di sekolah SMP IT Harapan Mulia, kami siap mendidik anak - anak generasi sekarang ini menjadi
             pribadi yang sholeh dan sholeha</p>
 
-        <div className={`flex text-center space-x-4 mt-4`}>
-            <div>
-                <h2 className={`text-lg font-semibold`}>1000 +</h2>
-                <p>Pendaftar setiap tahunnya</p>
+        <div className={`lg:flex lg:flex-row-reverse lg:items-center  lg:w-4/5`}>
+            <div className={`flex text-center space-x-4 mt-4`}>
+                <div>
+                    <h2 className={`text-lg font-semibold`}>1000 +</h2>
+                    <p>Pendaftar setiap tahunnya</p>
+                </div>
+
+                <div>
+                    <h2 className={`text-lg font-semibold`}>1000 +</h2>
+                    <p>Siwa berprestasi</p>
+                </div>
             </div>
 
-            <div>
-                <h2 className={`text-lg font-semibold`}>1000 +</h2>
-                <p>Siwa berprestasi</p>
+            <div className={`mt-6 flex justify-center space-x-3 w-full`}>
+                <Link href={'/register'}>
+                    <Button>Daftar Sekarang</Button>
+                </Link>
+                <Link href={'/login'}>
+
+                    <Button variant={'outlined'}>Masuk</Button>
+                </Link>
             </div>
-        </div>
-
-        <div className={`mt-6 flex justify-center space-x-3 w-full`}>
-            <Link href={'/register'}>
-                <Button>Daftar Sekarang</Button>
-            </Link>
-            <Link href={'/login'}>
-
-                <Button variant={'outlined'}>Masuk</Button>
-            </Link>
         </div>
     </div>
 }

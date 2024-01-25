@@ -9,5 +9,8 @@ export {
     TimelineBody,
     Typography,
     Radio,
-    Button
+    Button,
+    Accordion,
+    AccordionHeader,
+    AccordionBody,
 } from '@material-tailwind/react';
