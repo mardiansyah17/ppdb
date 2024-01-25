@@ -19,6 +19,7 @@ const config: Config = {
                 primary: {
                     1: "#005F2F",
                     2: "#00955B",
+                    3: '#005F2F'
                 }
             }
         },

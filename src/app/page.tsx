@@ -1,14 +1,15 @@
 import Hero from "@/components/landingpage/Hero";
 import Image from "next/image";
+import Exclusive from "@/components/landingpage/Exclusive";
 
 export default function Home() {
     return (
         <div className={`pb-10`}>
             <Hero/>
 
-            <div className={`grid grid-cols-1 justify-items-center gap-10`}>
+            <div className={`grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-10`}>
                 <div
-                    className={` h-60 w-72 relative rounded-lg overflow-hidden `}>
+                    className={` h-60 w-72 sm:w-96 relative rounded-lg overflow-hidden `}>
                     <div
                         className={`bg-[url('/img/landing1.png')] absolute top-0 w-full h-full bg-center bg-cover`}>
                         <span className="w-full h-full absolute opacity-65 bg-black"></span>
@@ -23,7 +24,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className={`bg-primary-2 h-60 text-white w-72 rounded-lg relative`}>
+                <div className={`bg-primary-2 h-60 text-white w-72 sm:w-96 rounded-lg relative`}>
                     <div className={`p-3`}>
                         <h3>About us</h3>
                         <p className={`text-sm`}>Gabung bersama kita, mari masuk ke sekolah ini dengan berbagai program
@@ -35,14 +36,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className={`mt-12 bg-primary-2 text-white`}>
-                <div className={`text-center`}>
-                    <h2 className={`text-2xl mb-6`}>Exclusive Programs</h2>
-                    <p>Gabung di program unggulan yang kami tawakan dibawah ini,
-                        setiap program tentunya memiliki keunggulan masing masing</p>
-                </div>
-            </div>
-
+            <Exclusive/>
         </div>
     );
 }

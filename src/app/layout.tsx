@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={`${poppins.className} bg-[#F1F3F5]`}>
-        <NextTopLoader/>
+        <NextTopLoader showSpinner={false} color={'#00955B'}/>
         <ThemeProvider value={theme}>
             {children}
         </ThemeProvider>
