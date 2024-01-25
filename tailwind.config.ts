@@ -5,6 +5,7 @@ const config: Config = {
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/libs/theme.ts",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
@@ -16,8 +17,8 @@ const config: Config = {
             },
             colors: {
                 primary: {
+                    1: "#005F2F",
                     2: "#00955B",
-                    1: "#005F2F"
                 }
             }
         },
