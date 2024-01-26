@@ -3,10 +3,12 @@ import Image from "next/image";
 import Exclusive from "@/components/landingpage/Exclusive";
 import {Accordion, AccordionBody, AccordionHeader} from "@/libs/materialTailwind";
 import {FaArrowDown, FaArrowUp} from "react-icons/fa6";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
     return (
         <div className={`pb-10`}>
+            <Navbar/>
             <Hero/>
 
             <div className={`grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-6`}>
