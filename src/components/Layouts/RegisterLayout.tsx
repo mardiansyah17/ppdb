@@ -1,10 +1,9 @@
 import React, {ReactNode} from 'react';
 import Timeline from "@/components/Timeline";
-import {Button} from "@/libs/materialTailwind";
 
 const RegisterLayout = ({children, description, title}: IRegisterLayout) => {
     return (
-        <div className={`p-3 sm:p-0 sm:w-[90%] sm:mx-auto lg:w-3/5`}>
+        <div className={`p-3  sm:w-[90%] sm:mx-auto lg:w-3/5 bg-white sm:shadow-md sm:my-3 sm:rounded-md`}>
             <Timeline className={"mx-auto"}/>
 
             <div className={`mt-10`}>
@@ -19,7 +18,6 @@ const RegisterLayout = ({children, description, title}: IRegisterLayout) => {
             <div>
                 {children}
             </div>
-            <Button fullWidth className={`mt-7`} color={'green'}>Konfirmasi</Button>
         </div>
 
     );

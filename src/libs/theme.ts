@@ -3,6 +3,13 @@ import {ButtonStyleTypes, InputStylesType, SelectStylesType, TextareaStylesType}
 
 const theme = {
     input: {
+        styles: {
+            base: {
+                container: {
+                    minWidth: "100%",
+                },
+            },
+        },
         defaultProps: {
             variant: "standard",
             color: "green"
@@ -14,6 +21,7 @@ const theme = {
         },
 
         styles: {
+
             variants: {
                 filled: {
                     green: {

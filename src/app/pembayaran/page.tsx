@@ -1,9 +1,14 @@
+'use client'
 import {Radio} from "@/libs/materialTailwind";
 import {LuFileUp} from "react-icons/lu";
 import RegisterLayout from "@/components/Layouts/RegisterLayout";
 import React from "react";
+import {Button} from "@material-tailwind/react";
+import {useRouter} from "next/navigation";
 
 export default function Page() {
+    const router = useRouter()
+
     return (
         <RegisterLayout title="Upload pembayaran"
                         description={"Segera unggah pembayaran Anda sekarang dan nikmati pengalaman pembayaran yang lebih cerdas, lebih cepat, dan lebih aman."}>
@@ -24,7 +29,8 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-
+            <Button fullWidth className={`mt-7`} color={'green'} type={'button'}
+                    onClick={() => router.push('/formulir')}>Konfirmasi</Button>
         </RegisterLayout>
     )
 }
