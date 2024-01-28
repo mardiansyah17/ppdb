@@ -1,22 +1,12 @@
-import Timeline from "@/components/Timeline";
-import {Button, Radio} from "@/libs/materialTailwind";
+import {Radio} from "@/libs/materialTailwind";
 import {LuFileUp} from "react-icons/lu";
+import RegisterLayout from "@/components/Layouts/RegisterLayout";
+import React from "react";
 
 export default function Page() {
     return (
-        <div className={`p-3 sm:w-4/5 sm:mx-auto md:w-3/5`}>
-            <Timeline className={"mx-auto"}/>
-
-            <div className={`mt-10`}>
-
-                <h2 className={`font-semibold text-xl mb-5`}>Upload Pembayaran</h2>
-                <p>
-                    Segera unggah pembayaran Anda sekarang dan nikmati pengalaman pembayaran yang lebih cerdas, lebih
-                    cepat, dan lebih aman.
-                </p>
-                <hr className="h-[2px] my-8 bg-[#D9D9D9] border-0 w-full"/>
-            </div>
-
+        <RegisterLayout title="Upload pembayaran"
+                        description={"Segera unggah pembayaran Anda sekarang dan nikmati pengalaman pembayaran yang lebih cerdas, lebih cepat, dan lebih aman."}>
             <div className={`mb-5`}>
                 <h3>Pilih Opsi Pembayaran</h3>
                 <div className={`mt-5`}>
@@ -35,7 +25,6 @@ export default function Page() {
                 </div>
             </div>
 
-            <Button fullWidth className={`mt-7`} color={'green'}>Konfirmasi</Button>
-        </div>
+        </RegisterLayout>
     )
 }

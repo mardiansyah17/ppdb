@@ -1,5 +1,5 @@
 'use client'
-import {ButtonStyleTypes, InputStylesType} from "@material-tailwind/react";
+import {ButtonStyleTypes, InputStylesType, SelectStylesType, TextareaStylesType} from "@material-tailwind/react";
 
 const theme = {
     input: {
@@ -35,7 +35,19 @@ const theme = {
         defaultProps: {
             color: "green"
         }
-    }
+    },
+    select: {
+        defaultProps: {
+            color: "green",
+            variant: "standard"
+        }
+    } as SelectStylesType,
+    textarea: {
+        defaultProps: {
+            color: "green",
+            variant: "standard"
+        }
+    } as TextareaStylesType
 }
 
 export default theme
