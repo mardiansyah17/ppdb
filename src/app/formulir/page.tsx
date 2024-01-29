@@ -41,7 +41,7 @@ const Page = () => {
                     </Button>
                 </div>
                 <Button fullWidth className={`mt-7`} color={'green'} type={'button'}
-                        onClick={() => router.push('/')}>Konfirmasi</Button>
+                        onClick={() => router.push('/ujian')}>Konfirmasi</Button>
             </form>
 
         </RegisterLayout>
