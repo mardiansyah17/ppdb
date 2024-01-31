@@ -7,13 +7,14 @@ import {
     MenuHandler,
     MenuItem,
     MenuList,
-    MobileNav,
     Navbar as NavbarComponent,
     Typography,
 } from "@material-tailwind/react";
 import {BsRocket, BsStack} from "react-icons/bs";
 import {AiOutlineArrowDown} from "react-icons/ai";
-import {FaBars} from "react-icons/fa6";
+import {FaBars, FaXmark} from "react-icons/fa6";
+import useSidebar from "@/store/useSidebar";
+import {usePathname} from "next/navigation";
 
 
 // nav list menu
@@ -122,7 +123,7 @@ function NavList() {
                     className="font-medium text-blue-gray-500"
                 >
                     <MenuItem className="flex items-center gap-2 lg:rounded-full">
-                      
+
                         <span className="text-gray-900"> {label}</span>
                     </MenuItem>
                 </Typography>
@@ -133,7 +134,8 @@ function NavList() {
 
 export default function Navbar() {
     const [isNavOpen, setIsNavOpen] = React.useState(false);
-
+    const {open, isOpen, close} = useSidebar()
+    const pathname = usePathname()
     const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
     React.useEffect(() => {
@@ -144,7 +146,10 @@ export default function Navbar() {
     }, []);
 
     return (
-        <NavbarComponent className="mx-auto  p-2  lg:pl-6" fullWidth>
+        <NavbarComponent
+            className={`mx-auto bg-white border-b border-b-gray-200  lg:pl-6 ${pathname.includes('admin') ? "lg:hidden" : ""}`}
+            fullWidth
+            shadow={false}>
             <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
                 <Typography
                     as="a"
@@ -160,17 +165,17 @@ export default function Navbar() {
                     size="sm"
                     color="blue-gray"
                     variant="text"
-                    onClick={toggleIsNavOpen}
+                    onClick={isOpen ? close : open}
                     className="ml-auto mr-2 lg:hidden"
                 >
-                    <FaBars className="h-6 w-6"/>
+                    {
+                        isOpen ? <FaXmark className="h-6 w-6"/> : <FaBars className="h-6 w-6"/>
+                    }
+
                 </IconButton>
 
                 {/*<ProfileMenu/>*/}
             </div>
-            <MobileNav open={isNavOpen} className="overflow-scroll">
-                <NavList/>
-            </MobileNav>
         </NavbarComponent>
     );
 }
